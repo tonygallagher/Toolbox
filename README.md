@@ -1,4 +1,4 @@
 Toolbox
 =======
 
-Some miscelaneous utility scripts I've found useful
+Some miscellaneous utility scripts I've found useful
