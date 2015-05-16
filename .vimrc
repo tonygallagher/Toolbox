@@ -84,7 +84,6 @@ nmap <silent> <c-l> :wincmd l<CR>
 
 " Custom Commands
 let mapleader=","
-nnoremap <leader>t :tabn<CR>
 nnoremap <leader>g :YcmCompleter GoTo<CR>
 nnoremap <leader>o :tabe<SPACE>
 nnoremap <leader>e :Vexplore!<CR>
