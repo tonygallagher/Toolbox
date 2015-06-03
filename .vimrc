@@ -83,10 +83,11 @@ nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 
 " Custom Commands
-let mapleader=","
+let mapleader="\<Space>"
 nnoremap <leader>g :YcmCompleter GoTo<CR>
 nnoremap <leader>o :tabe<SPACE>
 nnoremap <leader>e :Vexplore!<CR>
+nnoremap <Leader>w :w<CR>
 
 " Colour Scheme
 set t_Co=256
