@@ -6,6 +6,8 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'honza/vim-snippets'
+Plugin 'SirVer/ultisnips'
 Plugin 'tpope/vim-fugitive'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
@@ -76,6 +78,14 @@ let g:syntastic_style_error_symbol = ">"
 let g:syntastic_warning_symbol = "█"
 let g:syntastic_style_warning_symbol = ">"
 
+" Highlighting for Go
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+
+let g:UltiSnipsExpandTrigger="<c-j>"
+
 " Use ctrl-[hjkl] to select the active split.
 nmap <silent> <c-k> :wincmd k<CR>                                                                                      
 nmap <silent> <c-j> :wincmd j<CR>                                                                                      
@@ -83,11 +93,16 @@ nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 
 " Custom Commands
-let mapleader="\<Space>"
+let mapleader="\<SPACE>"
 nnoremap <leader>g :YcmCompleter GoTo<CR>
 nnoremap <leader>o :tabe<SPACE>
 nnoremap <leader>e :Vexplore!<CR>
-nnoremap <Leader>w :w<CR>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+" nnoremap <leader>t :tabn<CR>
+" nnoremap <leader>T :tabp<CR>
+
+au FileType go nmap <Leader>g <Plug>(go-def-tab)
 
 " Colour Scheme
 set t_Co=256
